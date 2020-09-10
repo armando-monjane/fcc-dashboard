@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fccdashboard-dev-233552-authRole",
+            "UnauthRoleArn": "arn:aws:iam::630574902261:role/amplify-fccdashboard-dev-233552-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::630574902261:role/amplify-fccdashboard-dev-233552-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-fccdashboard-dev-233552-deployment",
+            "UnauthRoleName": "amplify-fccdashboard-dev-233552-unauthRole",
+            "StackName": "amplify-fccdashboard-dev-233552",
+            "StackId": "arn:aws:cloudformation:us-east-1:630574902261:stack/amplify-fccdashboard-dev-233552/ce8b72c0-e19a-11ea-82e7-0afbd365c3b9",
+            "AmplifyAppId": "dnjlhbcartvw8"
+        },
+        "categories": {
+            "auth": {
+                "fccdashboard0b874110": {}
+            }
+        }
+    }
+}

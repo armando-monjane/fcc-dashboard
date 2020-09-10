@@ -1,0 +1,79 @@
+<aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left">
+    <!-- Logo -->
+    <div class="logo-sn ms-d-block-lg">
+      <a class="pl-0 ml-0 text-center" routerLink="/">
+        <img src="assets/img/logos/festas_cc (2).jpg" alt="logo">
+      </a>
+    </div>
+    <!-- Navigation -->
+    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion">
+      <!-- Dashboard -->
+      <li class="menu-item">
+        <a href="#" class="has-chevron" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard"> <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
+        </a>
+        <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
+          <li> <a routerLink="/" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Costic</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /Dashboard -->
+      <!-- orders -->
+      <li class="menu-item">
+        <a routerLink="/order" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}"> <span><i class="fas fa-clipboard-list fs-16"></i>Pedidos</span>
+        </a>
+      </li>
+      <!-- orders end -->
+      <!-- customers-->
+      <li class="menu-item">
+        <a href="#" class="has-chevron" data-toggle="collapse" data-target="#customer" aria-expanded="false" aria-controls="customer"> <span><i class="fas fa-user-friends fs-16"></i>Clientes</span>
+        </a>
+        <ul id="customer" class="collapse" aria-labelledby="customer" data-parent="#side-nav-accordion">
+          <li> <a routerLink="/customer-review" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Feedback de Clientes</a>
+          </li>
+          <li> <a routerLink="/customer-list" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Lista de Clientes</a>
+          </li>
+          <li> <a routerLink="/social-activity" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Social Activity</a>
+          </li>
+        </ul>
+      </li>
+      <!-- Customers  end -->
+      <!-- sales -->
+      <li class="menu-item">
+        <a routerLink="/sales" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}"> <span><i class="fa fa-briefcase fs-16"></i>Vendas</span>
+        </a>
+      </li>
+      <!-- sales end  -->
+
+      <!-- products -->
+      <li class="menu-item">
+        <a href="#" class="has-chevron" data-toggle="collapse" data-target="#products" aria-expanded="false" aria-controls="products"> <span><i class="fas fa-birthday-cake fs-16"></i>Produtos</span>
+        </a>
+        <ul id="products" class="collapse" aria-labelledby="products" data-parent="#side-nav-accordion">
+          <li>
+            <a routerLink="/products-list" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Lista de Produtos</a>
+          </li>
+          <li>
+            <a routerLink="/add-product" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Adicionar Produto</a>
+          </li>
+        </ul>
+      </li>
+      <!-- products end -->
+
+      <!-- categories -->
+      <li class="menu-item">
+        <a href="#" class="has-chevron" data-toggle="collapse" data-target="#categories" aria-expanded="false" aria-controls="categories"> <span><i class="fas fa-table fs-16"></i>Categorias</span>
+        </a>
+        <ul id="categories" class="collapse" aria-labelledby="categories" data-parent="#side-nav-accordion">
+          <li>
+            <a routerLink="/categories-list" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Lista de Categorias</a>
+          </li>
+          <li>
+            <a routerLink="/add-category" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Adicionar Categoria</a>
+          </li>
+        </ul>
+      </li>
+      <!-- categories end -->
+
+      <!-- /Apps -->
+    </ul>
+  </aside>

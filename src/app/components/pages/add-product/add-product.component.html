@@ -1,0 +1,97 @@
+<div class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
+  <app-side-navbar></app-side-navbar>
+   <main class="body-content">
+    <app-top-navbar></app-top-navbar>
+      <div class="ms-content-wrapper">
+      <div class="row">
+
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb pl-0">
+              <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> In&iacute;cio</a></li>
+              <li class="breadcrumb-item"><a routerLink="/products-list">Produtos</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Adicionar Produto</li>
+            </ol>
+          </nav>
+        </div>
+
+
+        <div class="col-xl-6 col-md-12">
+          <div class="ms-panel ms-panel-fh">
+            <div class="ms-panel-header">
+              <h6>Adicionar Produto</h6>
+            </div>
+            <div class="ms-panel-body">
+              <form [formGroup]="productForm" (ngSubmit)="saveProduct(productForm.value)" class="needs-validation clearfix" novalidate autocomplete="off">
+                <div class="form-row">
+                  <div class="col-md-12 mb-3">
+                    <label for="validationCustom18">Nome</label>
+                    <div class="input-group">
+                      <input type="text" formControlName="name" class="form-control" id="validationCustom18" placeholder="Nome do Produto" required>
+                      <div class="valid-feedback">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+                    <label for="validationCustom22">Categoria</label>
+                    <div class="input-group">
+                      <select formControlName="categoryID" class="form-control" id="validationCustom22" required>
+                        <option selected disabled>Selecione uma categoria</option>
+                        <option *ngFor="let category of categories" value="category.id">{{category.name}}</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Selecione uma Categoria
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom24">Quantidade</label>
+                    <div class="input-group">
+                      <input formControlName="quantity" type="text" class="form-control" id="validationCustom24" placeholder="01" required>
+                      <div class="invalid-feedback">
+                        Quantidade
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom25">Preço</label>
+                    <div class="input-group">
+                      <input formControlName="price" type="text" class="form-control" id="validationCustom25" placeholder="MZN100" required>
+                      <div class="invalid-feedback">
+                        Preço
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="validationCustom12">Descrição</label>
+                    <div class="input-group">
+                      <textarea formControlName="description" rows="5" id="validationCustom12" class="form-control" placeholder="Descrição do produto"></textarea>
+                      <div class="invalid-feedback">
+                        Por favor, preencha o campo
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="validationCustom12">Imagem</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="validatedCustomFile">
+                      <label class="custom-file-label" for="validatedCustomFile">Carregar Imagens</label>
+                      <div class="invalid-feedback">Ficheiro inválido</div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+                    <button class="btn btn-primary d-block" type="submit">Gravar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </main>
+<app-quick-bar></app-quick-bar>
+</div>

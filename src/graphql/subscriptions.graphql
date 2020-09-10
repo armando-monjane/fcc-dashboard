@@ -1,0 +1,340 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateProduct {
+  onCreateProduct {
+    id
+    name
+    description
+    thumbnail
+    price
+    quantity
+    categoryID
+    tags
+    orders {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateProduct {
+  onUpdateProduct {
+    id
+    name
+    description
+    thumbnail
+    price
+    quantity
+    categoryID
+    tags
+    orders {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteProduct {
+  onDeleteProduct {
+    id
+    name
+    description
+    thumbnail
+    price
+    quantity
+    categoryID
+    tags
+    orders {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCategory {
+  onCreateCategory {
+    id
+    name
+    description
+    products {
+      items {
+        id
+        name
+        description
+        thumbnail
+        price
+        quantity
+        categoryID
+        tags
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    thumbnail
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCategory {
+  onUpdateCategory {
+    id
+    name
+    description
+    products {
+      items {
+        id
+        name
+        description
+        thumbnail
+        price
+        quantity
+        categoryID
+        tags
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    thumbnail
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCategory {
+  onDeleteCategory {
+    id
+    name
+    description
+    products {
+      items {
+        id
+        name
+        description
+        thumbnail
+        price
+        quantity
+        categoryID
+        tags
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    thumbnail
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateOrder {
+  onCreateOrder {
+    id
+    costumerID
+    products {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateOrder {
+  onUpdateOrder {
+    id
+    costumerID
+    products {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteOrder {
+  onDeleteOrder {
+    id
+    costumerID
+    products {
+      items {
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateOrderProduct {
+  onCreateOrderProduct {
+    id
+    order {
+      id
+      costumerID
+      products {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    product {
+      id
+      name
+      description
+      thumbnail
+      price
+      quantity
+      categoryID
+      tags
+      orders {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateOrderProduct {
+  onUpdateOrderProduct {
+    id
+    order {
+      id
+      costumerID
+      products {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    product {
+      id
+      name
+      description
+      thumbnail
+      price
+      quantity
+      categoryID
+      tags
+      orders {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteOrderProduct {
+  onDeleteOrderProduct {
+    id
+    order {
+      id
+      costumerID
+      products {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    product {
+      id
+      name
+      description
+      thumbnail
+      price
+      quantity
+      categoryID
+      tags
+      orders {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCostumer {
+  onCreateCostumer {
+    id
+    phoneNumber
+    email
+    name
+    orders {
+      items {
+        id
+        costumerID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCostumer {
+  onUpdateCostumer {
+    id
+    phoneNumber
+    email
+    name
+    orders {
+      items {
+        id
+        costumerID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCostumer {
+  onDeleteCostumer {
+    id
+    phoneNumber
+    email
+    name
+    orders {
+      items {
+        id
+        costumerID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}

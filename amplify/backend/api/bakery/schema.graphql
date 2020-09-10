@@ -1,0 +1,42 @@
+type Product @model @key(name: "byCategory", fields: [ "categoryID", "id"]) {
+  id: ID!
+  name: String!
+  description: String
+  thumbnail: String
+  price: Float!
+  quantity: Int!
+  categoryID: ID!
+  tags: [String]
+  orders: [OrderProduct] @connection(name: "ProductOrders")
+}
+
+type Category @model {
+  id: ID!,
+  name: String!
+  description: String
+  products: [Product] @connection(keyName: "byCategory", fields: ["id"])
+  thumbnail: String
+  #TODO: add thumbnail
+}
+
+type Order @model @key(name: "byCustomer", fields: [ "costumerID", "id"]) {
+  id: ID!
+  costumerID: ID!
+  #TODO: add status
+  products: [OrderProduct] @connection(name: "OrderProducts")
+}
+
+type OrderProduct @model {
+  id: ID!
+  order: Order! @connection(name: "OrderProducts")
+  product: Product! @connection(name: "ProductOrders")
+}
+
+type Costumer @model {
+  id: ID!
+  phoneNumber: String
+  email: String
+  name: String!
+  orders: [Order] @connection(keyName: "byCustomer", fields: ["id"])
+}
+
